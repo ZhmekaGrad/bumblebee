@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путевки - Полёт шмеля</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Логотип Полёт шмеля">
+                    <span>Полёт шмеля</span>
+                </a>
+            </div>
+            <nav>
+                <ul id="nav">
+                    <li><a href="index.html" title="Вернуться на главную страницу">Главная</a></li>
+                    <li>
+                        <a href="routes.html" title="О маршрутах">Маршруты</a>
+                        <ul>
+                            <li><a href="route_detail.html">Детали маршрута 1</a></li>
+                            <li><a href="#">Детали маршрута 2</a></li>
+                            <li><a href="#">Детали маршрута 3</a></li>
+                            <li><a href="#">Детали маршрута 4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="clients.html" title="О клиентах">Клиенты</a>
+                        <ul>
+                            <li><a href="client_detail.html">Детали клиента 1</a></li>
+                            <li><a href="#">Детали клиента 2</a></li>
+                            <li><a href="#">Детали клиента 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tickets.html" class="active" title="О путёвках">Путевки</a>
+                        <ul>
+                            <li><a href="ticket_detail.html">Детали путёвки 1</a></li>
+                            <li><a href="#">Детали путёвки 2</a></li>
+                            <li><a href="#">Детали путёвки 3</a></li>
+                            <li><a href="#">Детали путёвки 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Список проданных путевок</h1>
+            </div>
+        </section>
+
+        <section class="data-table-section">
+            <div class="container">
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Код путевки</th>
+                                <th>Код клиента</th>
+                                <th>Код маршрута</th>
+                                <th>Дата отправления</th>
+                                <th>Количество</th>
+                                <th>Скидка (%)</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2023-12-15</td>
+                                <td>2</td>
+                                <td>5.00</td>
+                                <td><a href="ticket_detail.html?id=1" class="btn-small">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2024-01-20</td>
+                                <td>1</td>
+                                <td>0.00</td>
+                                <td><a href="ticket_detail.html?id=2" class="btn-small">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2024-02-10</td>
+                                <td>1</td>
+                                <td>0.00</td>
+                                <td><a href="ticket_detail.html?id=3" class="btn-small">Подробнее</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>2024-03-01</td>
+                                <td>1</td>
+                                <td>10.00</td>
+                                <td><a href="ticket_detail.html?id=4" class="btn-small">Подробнее</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Полёт шмеля. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

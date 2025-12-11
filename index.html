@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полёт шмеля - Туристическая фирма</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Логотип Полёт шмеля">
+                    <span>Полёт шмеля</span>
+                </a>
+            </div>
+            <nav class="container">
+                <ul id="nav">
+                    <li><a href="index.html" class="active" title="Вернуться на главную страницу">Главная</a></li>
+                    <li>
+                        <a href="routes.html" title="О маршрутах">Маршруты</a>
+                        <ul>
+                            <li><a href="route_detail.html">Детали маршрута 1</a></li>
+                            <li><a href="#">Детали маршрута 2</a></li>
+                            <li><a href="#">Детали маршрута 3</a></li>
+                            <li><a href="#">Детали маршрута 4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="clients.html" title="О клиентах">Клиенты</a>
+                        <ul>
+                            <li><a href="client_detail.html">Детали клиента 1</a></li>
+                            <li><a href="#">Детали клиента 2</a></li>
+                            <li><a href="#">Детали клиента 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tickets.html" title="О путёвках">Путевки</a>
+                        <ul>
+                            <li><a href="ticket_detail.html">Детали путёвки 1</a></li>
+                            <li><a href="#">Детали путёвки 2</a></li>
+                            <li><a href="#">Детали путёвки 3</a></li>
+                            <li><a href="#">Детали путёвки 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="calculator">
+        <h2>Калькулятор стоимости путёвки</h2>
+       <label for="destination">Направление:</label>
+        <select id="destination">
+            <option value="france">Франция</option>
+            <option value="italy">Италия</option>
+            <option value="thailand">Таиланд</option>
+            <option value="maldives">Мальдивы</option>
+        </select>
+        <label for="duration">Длительность (дней):</label>
+        <input type="number" id="duration" min="1" value="7">
+        <label for="adults">Взрослых:</label>
+        <input type="number" id="adults" min="1" value="1">
+        <label for="children">Детей (до 12 лет):</label>
+        <input type="number" id="children" min="0" value="0">
+        <button onclick="calculateCost()">Рассчитать</button>
+        <div id="result"></div>
+    </div>
+
+<script>
+function calculateCost() {
+    const destination = document.getElementById("destination").value;
+    const duration = parseInt(document.getElementById("duration").value);
+    const adults = parseInt(document.getElementById("adults").value);
+    const children = parseInt(document.getElementById("children").value);
+    let basePricePerDay = 0;
+
+    switch (destination) {
+        case "france":
+            basePricePerDay = 50;
+            break;
+        case "italy":
+            basePricePerDay = 60;
+            break;
+        case "thailand":
+            basePricePerDay = 80;
+            break;
+        case "maldives":
+            basePricePerDay = 150;
+            break;
+        default:
+            basePricePerDay = 0;
+    }
+
+    let totalCost = basePricePerDay * duration * adults; 
+    totalCost += basePricePerDay * 0.7 * duration * children; 
+
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = `Стоимость путёвки: ${totalCost.toFixed(2)} $`;
+}
+</script>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Добро пожаловать в "Полёт шмеля"!</h1>
+                <p>Ваш надежный партнер в мире незабываемых путешествий.</p>
+                <p>Исследуйте мир с нами!</p>
+            </div>
+        </section>
+
+        <section class="welcome-info">
+            <div class="container">
+                <h2>О нашей компании</h2>
+                <p>Мы предлагаем широкий спектр туристических услуг, помогая каждому клиенту найти идеальное путешествие. От экзотических стран до уютных европейских городов — мы позаботимся о каждой детали вашего отдыха.</p>
+                <p>С нашей помощью вы сможете открыть для себя новые горизонты, получить незабываемые впечатления и отдохнуть с комфортом.</p>
+            </div>
+        </section>
+        <div class="blocks"><a href="#"><img src="img/1.webp" alt="thumb" class="resize_thumb"><span>
+            <img src="img/1.webp" alt="large"></span></a></div>
+        <div class="blocks"><a href="#"><img src="img/2.webp" alt="thumb" class="resize_thumb"><span>
+            <img src="img/2.webp" alt="large"></span></a></div>
+        <div class="blocks"><a href="#"><img src="img/3.webp" alt="thumb" class="resize_thumb"><span>
+            <img src="img/3.webp" alt="large"></span></a></div>
+        <div class="blocks"><a href="#"><img src="img/4.webp" alt="thumb" class="resize_thumb"><span>
+            <img src="img/4.webp" alt="large"></span></a></div>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Полёт шмеля. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

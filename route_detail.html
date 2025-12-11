@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали маршрута - Полёт шмеля</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Логотип Полёт шмеля">
+                    <span>Полёт шмеля</span>
+                </a>
+            </div>
+            <nav>
+                <ul id="nav">
+                    <li><a href="index.html" title="Вернуться на главную страницу">Главная</a></li>
+                    <li>
+                        <a href="routes.html" class="active" title="О маршрутах">Маршруты</a>
+                        <ul>
+                            <li><a href="route_detail.html">Детали маршрута 1</a></li>
+                            <li><a href="#">Детали маршрута 2</a></li>
+                            <li><a href="#">Детали маршрута 3</a></li>
+                            <li><a href="#">Детали маршрута 4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="clients.html" title="О клиентах">Клиенты</a>
+                        <ul>
+                            <li><a href="client_detail.html">Детали клиента 1</a></li>
+                            <li><a href="#">Детали клиента 2</a></li>
+                            <li><a href="#">Детали клиента 3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="tickets.html" title="О путёвках">Путевки</a>
+                        <ul>
+                            <li><a href="ticket_detail.html">Детали путёвки 1</a></li>
+                            <li><a href="#">Детали путёвки 2</a></li>
+                            <li><a href="#">Детали путёвки 3</a></li>
+                            <li><a href="#">Детали путёвки 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Детали маршрута</h1>
+            </div>
+        </section>
+
+        <section class="detail-view">
+            <div class="container">
+                <div class="detail-item">
+                    <h2>Маршрут: Мальдивы</h2>
+                    <p><strong>Код маршрута:</strong> 1</p>
+                    <p><strong>Страна:</strong> Мальдивы</p>
+                    <p><strong>Климат:</strong> Тропический</p>
+                    <p><strong>Длительность:</strong> 10 дней</p>
+                    <p><strong>Отель:</strong> Ocean Breeze Resort</p>
+                    <p><strong>Стоимость:</strong> 150000.00 ₽</p>
+                    <div class="actions">
+                        <a href="tickets.html?route_id=1" class="btn">Купить путевку</a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Полёт шмеля. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
